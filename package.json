@@ -1,0 +1,32 @@
+{
+  "name": "gtci",
+  "version": "1.0.0",
+  "description": "grokking the coding interview playground",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhuz94/gtci.git"
+  },
+  "keywords": [
+    "grokking",
+    "interview",
+    "data",
+    "structures"
+  ],
+  "author": "abhuz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhuz94/gtci/issues"
+  },
+  "homepage": "https://github.com/abhuz94/gtci#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.1.4",
+    "jest": "^27.5.1"
+  }
+}

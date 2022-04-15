@@ -1,4 +1,4 @@
-// TC - O(N) SC - O(1)
+// TC - O(N) + O(NlogN) SC - O(1)
 
 export default function mergeIntervals(intervals = []) {
   if (intervals.length <= 1) { return intervals; }

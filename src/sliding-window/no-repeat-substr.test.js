@@ -5,4 +5,6 @@ test('No-repeat Substring', () => {
   expect(noRepeatSubstr('abbbb')).toEqual(2);
   expect(noRepeatSubstr('abccde')).toEqual(3);
   expect(noRepeatSubstr('abcde')).toEqual(5);
+  expect(noRepeatSubstr('dvdf')).toEqual(3);
+  expect(noRepeatSubstr('abba')).toEqual(2);
 });

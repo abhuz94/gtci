@@ -28,5 +28,8 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.1.4",
     "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "collections": "^5.1.13"
   }
 }

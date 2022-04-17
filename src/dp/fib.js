@@ -34,6 +34,8 @@ const fibTab = (n) => {
 // TC - O(N) SC - O(1)
 
 const fibOpt = (n) => {
+  if (n === 0) { return 0; }
+
   let prev = 0;
   let curr = 1;
 

@@ -34,6 +34,8 @@ const climbingStairsTab = (n) => {
 // TC - O(N) SC - O(1)
 
 const climbingStairsOpt = (n) => {
+  if (n <= 1) { return n; }
+
   let prev = 1;
   let curr = 2;
 

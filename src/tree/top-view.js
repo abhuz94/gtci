@@ -1,17 +1,21 @@
 // TC - O(N) SC - O(W)
 
-export default function topView(initialRoot = null) {
+export default function topView(root = null) {
   const map = new Map();
-  const topViewHelper = (root = initialRoot, level = 0) => {
-    if (root === null) { return; }
+  const queue = [[root, 0]];
 
-    if (!map.has(level)) { map.set(level, root.val); }
+  while (queue.length) {
+    const len = queue.length;
 
-    topViewHelper(root.left, level - 1);
-    topViewHelper(root.right, level + 1);
-  };
+    for (let i = 0; i < len; i += 1) {
+      const [node, level] = queue.shift();
 
-  topViewHelper();
+      if (node.left) { queue.push([node.left, level - 1]); }
+      if (node.right) { queue.push([node.right, level + 1]); }
+
+      if (!map.has(level)) { map.set(level, node.val); }
+    }
+  }
 
   return Array.from(map).sort(([a], [b]) => a - b).map(([, val]) => val);
 }

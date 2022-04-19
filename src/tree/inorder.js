@@ -5,6 +5,7 @@ export default function inorder(root = null) {
   const stack = [];
   let node = root;
 
+  // eslint-disable-next-line no-constant-condition
   while (1) {
     if (node) {
       stack.push(node);

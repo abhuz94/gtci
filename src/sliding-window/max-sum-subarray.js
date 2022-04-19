@@ -1,3 +1,5 @@
+// TC - O(N) SC - O(1)
+
 export default function maxSumSubarray(arr = []) {
   let maxTillHere = Number.NEGATIVE_INFINITY;
   let maxTillNow = 0;

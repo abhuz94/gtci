@@ -12,5 +12,8 @@ test('Inorder Successor in Binary Search Tree', () => {
     new TreeNode(22),
   );
 
-  expect(inorderSuccessor(root, 14).val).toEqual(20);
+  const { predecessor, successor } = inorderSuccessor(root, 8);
+
+  expect(successor.val).toEqual(10);
+  expect(predecessor.val).toEqual(4);
 });

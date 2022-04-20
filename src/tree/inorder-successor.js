@@ -2,19 +2,27 @@
 
 export default function inorderSuccessor(initialRoot = null, key = 0) {
   let successor = null;
+  let predecessor = null;
   const inorderSuccessorHelper = (root = initialRoot) => {
-    if (root === null) { return null; }
-    if (key === root.val) { return inorderSuccessorHelper(root.right); }
+    if (root === null) { return; }
+    if (key === root.val) {
+      inorderSuccessorHelper(root.right);
+      inorderSuccessorHelper(root.left);
+
+      return;
+    }
     if (key < root.val) {
       successor = root;
 
-      return inorderSuccessorHelper(root.left);
-    }
+      inorderSuccessorHelper(root.left);
+    } else {
+      predecessor = root;
 
-    return inorderSuccessorHelper(root.right);
+      inorderSuccessorHelper(root.right);
+    }
   };
 
   inorderSuccessorHelper();
 
-  return successor;
+  return { successor, predecessor };
 }
